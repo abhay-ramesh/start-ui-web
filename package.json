@@ -11,7 +11,7 @@
     "postinstall": "run-p gen:prisma gen:build-info",
     "prepare": "pnpm lefthook install",
     "dev": "run-p env dev:*",
-    "dev:app": "pnpm gen:build-info && vite dev",
+    "dev:app": "pnpm gen:build-info && vite dev --host",
     "build": "cross-env NODE_ENV=production run-p env gen:build-info && vite build",
     "start": "dotenv -- node .output/server/index.mjs",
     "env": "run-p env:*",
@@ -142,6 +142,7 @@
     "typescript": "5.9.3",
     "typescript-eslint": "8.54.0",
     "vite": "7.3.1",
+    "vite-plugin-qrcode": "0.3.0",
     "vite-tsconfig-paths": "6.0.5",
     "vitest": "4.0.18",
     "vitest-browser-react": "2.0.4"
